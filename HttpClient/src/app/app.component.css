@@ -1,0 +1,36 @@
+
+nav{
+    width: 100%;
+    display: flex;
+    background: rgb(252, 164, 2);
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.btn:hover{
+    background: rgb(25, 187, 4);
+}
+
+form{
+    display: block;
+    width: 100%;
+}
+
+.heading{
+    font-size: 20px;
+}
+.submit-btn{
+    margin: auto;
+    padding: 8px 18px;
+    background: rgb(26, 207, 2);
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: none;
+    font-size: 16px;
+    margin-top: 20px;
+}

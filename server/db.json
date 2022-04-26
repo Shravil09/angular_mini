@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "name": "Shravil Bhagwat",
+      "mobile": "9179991702",
+      "email": "shravil@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "Sagar Soni",
+      "mobile": "9981862892",
+      "email": "sagar@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "name": "Ashish Joshi",
+      "mobile": "9981268226",
+      "email": "ashish@gmail.com",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "name": "Shravil Bhagwat",
+      "mobile": "9931022258",
+      "email": "s@gmail.com",
+      "password": "12345",
+      "id": 4
+    }
+  ],
+  "signup": [
+    {
+      "fullname": "Shravil Bhagwat",
+      "email": "s@gmail.com",
+      "mobile": 9179991702,
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "fullname": "Sagar Soni",
+      "email": "sagar@gmail.com",
+      "mobile": 9179991702,
+      "password": "12345",
+      "id": 2
+    }
+  ]
+}

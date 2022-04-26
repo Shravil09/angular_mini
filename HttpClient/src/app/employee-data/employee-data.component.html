@@ -1,0 +1,61 @@
+
+<div class="container">
+    <div>
+      <nav>
+          <h1>CRUD Operation
+            <button routerLink="/login"type="submit"  class="btn btn-danger">Logout</button>
+          </h1> 
+     </nav>
+    
+       <div class="mb-3">
+         <label>Search</label>
+          <input type="text" class="form-control" placeholder="search here" [(ngModel)]="filteredString">
+       </div>
+   
+    <form #myForm = "ngForm">
+      <div >
+        <label for="exampleInputFullname1" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="exampleInputFullname1" name="name" aria-describedby="emailHelp" [(ngModel)]="userObj.name">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputMobile1" class="form-label">Mobile Number</label>
+        <input type="email" class="form-control" id="exampleInputMobile1" name="mobile" aria-describedby="emailHelp" [(ngModel)]="userObj.mobile">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control"  id="exampleInputEmail1" name="email" aria-describedby="emailHelp" [(ngModel)]="userObj.email">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" id="exampleInputPassword1" [(ngModel)]="userObj.password">
+      </div>
+    
+      <button type="button" class="btn btn-primary"(click)="addUser(myForm.value)" *ngIf="!isEdit">Submit</button>
+      <button type="button" class="btn btn-info" *ngIf="isEdit" (click)="updateUser()">Update</button>
+    </form>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Full Name</th>
+          <th scope="col">Mobile Number </th>
+          <th scope="col">Email</th>
+          <th scope="col">Password</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor = "let user of allUser  | filter:filteredString">
+           
+            <td>{{user.name}}</td>
+            <td>{{user.mobile}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+            <td><button (click)="editUser(user)" class="btn btn-warning">Edit</button></td>
+            <td><button (click)="deleteUser(user)" class="btn btn-danger">Delete</button></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  
